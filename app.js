@@ -2,6 +2,14 @@ const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
 const slider = document.querySelector("#slider");
 const images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg"];
+for (i = 0; i < images.length; i++) $('#slider').append($(`<img style="display: none" src="img${i+1}.jpg"/>`));
+
+window.addEventListener("load", myFunction);
+
+function myFunction() {
+    $(".loader").fadeOut(500);
+    slider.style.display = 'flex';
+}
 
 leftArrow.addEventListener("click", () => {
     if (slider.dataset.img == 0) {
