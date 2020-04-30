@@ -12,7 +12,10 @@
         #slider img {
             width: 100px;
            
-         transition: .2s;
+            transition: .2s;
+        }
+        #slider img:hover{
+            width: 120px;
         }
         .left{
          transform: rotate(180deg);
@@ -27,16 +30,14 @@
         }
         #slider {
             display: none;
-            background-color: steelblue;
             height: 100vh;
-            /* display: flex; */
             align-items: center;
             justify-content: space-between;
             background-image: url("img1.jpg");
             background-size: 100% 100%;
             transition: 1s background-image;
             animation-name: example;
-            animation-duration: 15s;
+            animation-duration: 7s;
             animation-direction: alternate;
             animation-iteration-count: infinite;
         }
@@ -88,20 +89,16 @@
 		100% {
 			transform: rotate(360deg);
 		}
-	}
+    }
+    h2 {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
 
-        window.addEventListener("load", myFunction);
-
-
-function myFunction() {
-    //document.querySelector("#sheet-1").style.opacity = 1;
-    //document.querySelector(".loader").style.display = 'none';
-    $(".loader").fadeOut(500);
-    slider.style.display = 'flex';
-}
     </script>
 </head>
 <body>
@@ -109,6 +106,7 @@ function myFunction() {
     <section id="slider" data-img="0">
         <img src="arrow2.png" alt="" class="left">
         <img src="arrow2.png" alt="" class="right">
+        <h2>1/5</h2>
     </section>
     
     <script src="app.js"></script>
