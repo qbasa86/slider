@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #slider img {
+            width: 100px;
+           
+         transition: .2s;
+        }
+        .left{
+         transform: rotate(180deg);
+         opacity: .2;
+         margin-left: 50px;
+           
+        }
+        .right {
+            justify-self: flex-end;
+            
+             margin-right: 50px;
+        }
+        #slider {
+            background-color: steelblue;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url("img1.jpg");
+            background-size: 100% 100%;
+            transition: 1s background-image;
+            animation-name: example;
+            animation-duration: 15s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+    
+        @keyframes example {
+        from {
+            background-size: 100% 100%;
+            }
+        to {
+            background-size: 130% 130%;
+            }
+}
+        
+    </style>
+</head>
+<body>
+    <section id="slider" data-img="0">
+        <img src="arrow2.png" alt="" class="left">
+        <img src="arrow2.png" alt="" class="right">
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
